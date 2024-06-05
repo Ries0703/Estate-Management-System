@@ -55,6 +55,7 @@ public class BuildingController {
         return new ModelAndView("admin/building/edit")
                 .addObject("buildingEdit", buildingService.findById(id))
                 .addObject("districtCodes", DistrictCode.districtMap())
-                .addObject("typeCodes", TypeCode.typeCodeMap());
+                .addObject("typeCodes", TypeCode.typeCodeMap())
+                .addObject("currentUserRoles", SecurityUtils.getPrincipal().getRoles());
     }
 }

@@ -330,29 +330,37 @@
                             <display:column property="rentPrice" title="Giá Thuê"/>
                             <display:column property="serviceFee" title="Phí dịch vụ"/>
                             <display:column property="brokerageFee" title="Phí MG"/>
-                            <c:if test="${currentUserRoles.contains('ROLE_MANAGER')}">
-                                <display:column title="Thao tác" media="html">
+                            <display:column title="Thao tác" media="html">
                                     <div>
-                                        <button
-                                                title="Giao tòa nhà"
-                                                class="btn btn-sm btn-success"
-                                                onclick="assignmentBuilding(${buildingTable.id})"
-                                                name="assignmentBuildingBtn"
-                                        >
-                                            <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width="16"
-                                                    height="16"
-                                                    fill="currentColor"
-                                                    class="bi bi-list"
-                                                    viewBox="0 0 16 16"
+                                        <c:if test="${currentUserRoles.contains('ROLE_MANAGER')}">
+                                            <button
+                                                    title="Giao tòa nhà"
+                                                    class="btn btn-sm btn-success"
+                                                    onclick="assignmentBuilding(${buildingTable.id})"
+                                                    name="assignmentBuildingBtn"
                                             >
-                                                <path
-                                                        fill-rule="evenodd"
-                                                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-                                                />
-                                            </svg>
+                                                <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="16"
+                                                        height="16"
+                                                        fill="currentColor"
+                                                        class="bi bi-list"
+                                                        viewBox="0 0 16 16"
+                                                >
+                                                    <path
+                                                            fill-rule="evenodd"
+                                                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                                                    />
+                                                </svg>
+                                            </button>
+                                            <button
+                                                data-building-id="${buildingTable.id}"
+                                                title="Xóa tòa nhà"
+                                                class="btn btn-sm btn-danger btnDeleteOneBuilding"
+                                        >
+                                            <i class="ace-icon glyphicon glyphicon-trash"></i>
                                         </button>
+                                        </c:if>
                                         <a
                                                 href="/admin/building-edit-${buildingTable.id}"
                                                 class="btn btn-sm btn-info"
@@ -360,16 +368,8 @@
                                         >
                                             <i class="ace-icon fa fa-pencil-square-o"></i>
                                         </a>
-                                        <button
-                                                data-building-id="${buildingTable.id}"
-                                                title="Xóa tòa nhà"
-                                                class="btn btn-sm btn-danger btnDeleteOneBuilding"
-                                        >
-                                            <i class="ace-icon glyphicon glyphicon-trash"></i>
-                                        </button>
                                     </div>
                                 </display:column>
-                            </c:if>
                         </display:table>
                         <ul class="pagination" id="pagination"></ul>
                         <input type="hidden" value="" id="page" name="page">

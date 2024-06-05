@@ -329,14 +329,18 @@
                                 </c:if>
 
                                 <c:if test="${not empty buildingEdit.id}">
-                                    <button
-                                            class="btn btn-primary"
-                                            id="btnUpdateBuilding"
-                                            onclick="editBuilding(${buildingEdit.id})"
-                                    >
-                                        Sửa tòa nhà
-                                    </button>
+                                    <c:if test="${currentUserRoles.contains('ROLE_MANAGER')}">
+                                        <button
+                                                class="btn btn-primary"
+                                                id="btnUpdateBuilding"
+                                                onclick="editBuilding(${buildingEdit.id})"
+                                        >
+                                            Sửa tòa nhà
+                                        </button>
+                                    </c:if>
                                 </c:if>
+
+
                                 <a class="btn btn-primary" href="./building-list">
                                     Hủy thao tác
                                 </a>
