@@ -70,7 +70,7 @@ public class BuildingServiceImpl implements IBuildingService {
         if (null != buildingDTO.getImageBase64()) {
             if (null != buildingEntity.getImage()) {
                 if (!path.equals(buildingEntity.getImage())) {
-                    File file = new File("C:/home/office" + buildingEntity.getImage());
+                    File file = new File(System.getProperty("catalina.base") + "/webapps" + buildingEntity.getImage());
                     file.delete();
                 }
             }

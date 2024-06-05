@@ -11,10 +11,10 @@ import java.io.IOException;
 public class UploadFileUtils {
 
     public static void writeOrUpdate(String path, byte[] bytes) {
-        path = "C:/home/office" + path;
+        path = System.getProperty("catalina.base") + "/webapps" + path;
         File file = new File(StringUtils.substringBeforeLast(path, "/"));
         if (!file.exists()) {
-            file.mkdir();
+            file.mkdirs();
         }
         try (FileOutputStream fop = new FileOutputStream(path)) {
             fop.write(bytes);
