@@ -25,30 +25,11 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
             throws IOException {
-        String targetUrl = determineTargetUrl(authentication);
+        String targetUrl = SystemConstant.ADMIN_HOME;
         if (response.isCommitted()) {
             System.out.println("Can't redirect");
             return;
         }
         redirectStrategy.sendRedirect(request, response, targetUrl);
-    }
-
-    public String determineTargetUrl(Authentication authentication) {
-        String url = "";
-        List<String> roles = SecurityUtils.getAuthorities();
-        if (isUser(roles)) {
-            url = SystemConstant.HOME;
-        } else if (isAdmin(roles)) {
-            url = SystemConstant.ADMIN_HOME;
-        }
-        return url;
-    }
-
-    private boolean isAdmin(List<String> roles) {
-        return roles.contains(SystemConstant.STAFF_ROLE) || roles.contains(SystemConstant.MANAGER_ROLE);
-    }
-
-    private boolean isUser(List<String> roles) {
-        return roles.contains(SystemConstant.USER_ROLE);
     }
 }

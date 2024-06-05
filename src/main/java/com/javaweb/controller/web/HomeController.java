@@ -15,6 +15,11 @@ import javax.servlet.http.HttpSession;
 @Controller(value = "homeControllerOfWeb")
 public class HomeController {
 
+	@RequestMapping(value = "/admin/home", method = RequestMethod.GET)
+	public ModelAndView home() {
+		return new ModelAndView("admin/home");
+	}
+
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView login() {
         return new ModelAndView("login");
