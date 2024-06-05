@@ -19,7 +19,7 @@ Main users roles:
 - Step 2: Unzip the folder.
 - Step 3: Navigate to the `bin` directory of the folder.
 - Step 4: Find and run the `startup.bat` file inside the `bin` directory.
-- Step 5: Wait until the line `INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [number] ms` pops up.
+- Step 5: Wait until the line `INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [number] ms` pops up (about 1 minute).
 - Step 6: Open any browser, enter the url `localhost:8080/login` 
 
 To see the functionalities that a Manager can use, login with:
