@@ -1,7 +1,7 @@
 # Estate Management System - OOP Project User Manual
 ## Class: IT3100E - 147839
 ## Lecturer: Tran The Hung
-## Group members:
+## Group 20 members:
 ### - Tran Anh Dung - 20226031
 ### - Nguyen Dinh An - 20226007
 ### - Le Ngoc Quang Hung - 20225975
