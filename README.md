@@ -8,7 +8,7 @@
 ### - Nguyen Huu Hoang Hai Anh - 20226010
 
 ## Introduction
-An estate management application developed using Java 8, Spring Boot, SpringMVC, Spring Data JPA, and Spring Data Security. Object-Oriented Programming principles are used to design the Backend.
+An estate management application developed using Java 8, Spring Boot, SpringMVC, Spring Data JPA, and Spring Security. Object-Oriented Programming principles are used to design the Backend.
 
 Main users roles: 
 - Staff
