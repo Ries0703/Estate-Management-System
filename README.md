@@ -1,14 +1,14 @@
 # Estate Management System - OOP Project User Manual
 ## Class: IT3100E - 147839
 ## Lecturer: Tran The Hung
-## Group members:
+## Group 20 members:
 ### - Tran Anh Dung - 20226031
 ### - Nguyen Dinh An - 20226007
 ### - Le Ngoc Quang Hung - 20225975
 ### - Nguyen Huu Hoang Hai Anh - 20226010
 
 ## Introduction
-An estate management application developed using Java 8, Spring Boot, SpringMVC, Spring Data JPA, and Spring Data Security. Object-Oriented Programming principles are used to design the Backend.
+An estate management application developed using Java 8, Spring Boot, SpringMVC, Spring Data JPA, and Spring Security. Object-Oriented Programming principles are used to design the Backend.
 
 Main users roles: 
 - Staff
