@@ -14,6 +14,13 @@ Main users roles:
 - Staff
 - Manager
 
+### Setup (Docker):
+- Step 1: Install Docker on your respective system
+- Step 2: Run:
+```bash
+docker compose up -d --build
+```
+
 ### Setup (Windows only):
 - Step 1: Download the compressed folder from [this](https://drive.google.com/file/d/10rbYSHjaZJXsCjMm9IyUpxwtlCRrtx4N/view?usp=sharing) link.
 - Step 2: Unzip the folder.
@@ -21,6 +28,9 @@ Main users roles:
 - Step 4: Find and run the `startup.bat` file inside the `bin` directory.
 - Step 5: Wait until the line `INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [number] ms` pops up (about 1 minute).
 - Step 6: Open any browser, enter the url `localhost:8080/login` 
+
+
+
 
 To see the functionalities that a Manager can use, login with:
 - username: `nguyenvana`
