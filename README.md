@@ -20,6 +20,7 @@ Main users roles:
 ```bash
 docker compose up -d --build
 ```
+- Step 3: Access the app at `localhost:8080/app/login`
 
 ### Setup (Windows only):
 - Step 1: Download the compressed folder from [this](https://drive.google.com/file/d/10rbYSHjaZJXsCjMm9IyUpxwtlCRrtx4N/view?usp=sharing) link.
